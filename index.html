@@ -174,10 +174,9 @@
 
     <div>
       <label class="form-label" for="email">Get early access when it launches —</label>
-      <!-- Replace YOUR_FORM_ID with your Formspree form ID after signing up at formspree.io -->
       <form
         id="waitlist-form"
-        action="https://formspree.io/f/YOUR_FORM_ID"
+        action="https://formspree.io/f/xlgkzkjw"
         method="POST"
         onsubmit="handleSubmit(event)"
       >
@@ -192,6 +191,7 @@
           <button type="submit">Join the waitlist</button>
         </div>
       </form>
+      <p id="form-error" style="color:#c0392b;font-size:0.875rem;margin-top:0.5rem;"></p>
       <p class="success-msg" id="success">You're on the list. I'll reach out personally.</p>
     </div>
 
@@ -206,6 +206,11 @@
     async function handleSubmit(e) {
       e.preventDefault();
       const form = document.getElementById('waitlist-form');
+      const btn = form.querySelector('button');
+      const errorEl = document.getElementById('form-error');
+      btn.textContent = 'Sending...';
+      btn.disabled = true;
+      errorEl.textContent = '';
       const data = new FormData(form);
       try {
         const res = await fetch(form.action, {
@@ -213,11 +218,20 @@
           body: data,
           headers: { 'Accept': 'application/json' }
         });
+        const json = await res.json();
         if (res.ok) {
           form.style.display = 'none';
           document.getElementById('success').style.display = 'block';
+        } else {
+          errorEl.textContent = json.error || 'Something went wrong. Try again.';
+          btn.textContent = 'Join the waitlist';
+          btn.disabled = false;
         }
-      } catch (_) {}
+      } catch (err) {
+        errorEl.textContent = 'Could not connect. Try again.';
+        btn.textContent = 'Join the waitlist';
+        btn.disabled = false;
+      }
     }
   </script>
 </body>
