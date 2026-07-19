@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy — Rampart</title>
+  <meta name="description" content="How Rampart collects, uses, and protects your data." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg: #0f0e0d;
+      --surface: #1a1916;
+      --border: #2e2c29;
+      --text: #e8e4dd;
+      --muted: #8a8178;
+      --accent: #c8a96e;
+      --accent-dark: #a8893e;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Inter', sans-serif;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 3rem 1.5rem 5rem;
+    }
+
+    .container {
+      max-width: 680px;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 2.5rem;
+    }
+
+    a { color: var(--accent); }
+
+    .wordmark {
+      font-family: 'EB Garamond', serif;
+      font-size: 1rem;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--accent);
+    }
+
+    .back-link {
+      font-size: 0.875rem;
+      color: var(--muted);
+      text-decoration: none;
+    }
+
+    .headline {
+      font-family: 'EB Garamond', serif;
+      font-size: clamp(1.75rem, 5vw, 2.5rem);
+      line-height: 1.2;
+      font-weight: 400;
+      margin-top: 0.5rem;
+    }
+
+    .updated {
+      font-size: 0.875rem;
+      color: var(--muted);
+      margin-top: 0.5rem;
+    }
+
+    .intro {
+      color: var(--muted);
+      font-size: 1rem;
+      line-height: 1.7;
+    }
+
+    .intro strong { color: var(--text); font-weight: 500; }
+
+    section {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+
+    h2 {
+      font-family: 'EB Garamond', serif;
+      font-size: 1.375rem;
+      font-weight: 500;
+      color: var(--text);
+    }
+
+    p, li {
+      color: var(--muted);
+      font-size: 0.9375rem;
+      line-height: 1.7;
+    }
+
+    p strong, li strong { color: var(--text); font-weight: 500; }
+
+    ul { padding-left: 1.25rem; display: flex; flex-direction: column; gap: 0.5rem; }
+
+    .divider { border: none; border-top: 1px solid var(--border); margin: 0.5rem 0; }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.875rem;
+    }
+
+    th, td {
+      text-align: left;
+      padding: 0.6rem 0.75rem;
+      border-bottom: 1px solid var(--border);
+      color: var(--muted);
+      vertical-align: top;
+    }
+
+    th {
+      color: var(--text);
+      font-weight: 500;
+      font-size: 0.8125rem;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+
+    td strong { color: var(--text); font-weight: 500; }
+
+    .table-wrap { overflow-x: auto; }
+
+    .callout {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 1.25rem;
+      font-size: 0.9375rem;
+      line-height: 1.7;
+      color: var(--muted);
+    }
+
+    .callout strong { color: var(--accent); font-weight: 500; }
+
+    .contact {
+      font-size: 0.9375rem;
+      color: var(--muted);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+
+    <div>
+      <span class="wordmark">Rampart</span>
+      <h1 class="headline">Privacy Policy</h1>
+      <p class="updated">Last updated: July 19, 2026</p>
+    </div>
+
+    <p class="intro">
+      Rampart is an accountability app. That means it handles some of the most personal
+      information there is — a person's recovery journey. <strong>We take that seriously.</strong>
+      This page explains what we collect, why, who can see it, and how you can delete it,
+      in plain language.
+    </p>
+
+    <hr class="divider" />
+
+    <section>
+      <h2>What we collect</h2>
+      <div class="table-wrap">
+        <table>
+          <tr><th>Data</th><th>What it's for</th></tr>
+          <tr><td><strong>Email address</strong></td><td>Sign-in, and how your accountability partner is invited/identified.</td></tr>
+          <tr><td><strong>Covenant text</strong></td><td>The personal commitment you write for yourself in the app. Visible only to you.</td></tr>
+          <tr><td><strong>Daily check-ins</strong></td><td>Your "doing well" / "struggling" status, sent to your accountability partner.</td></tr>
+          <tr><td><strong>Website whitelist</strong></td><td>The list of sites you're allowed to visit, set by your partner and stored so it can sync to your device.</td></tr>
+          <tr><td><strong>Site requests</strong></td><td>Domains you've asked your partner to allow.</td></tr>
+          <tr><td><strong>Device push token</strong></td><td>Lets us notify you or your partner (e.g. "struggling" alerts, whitelist updates). Apple-issued, not personally identifying on its own.</td></tr>
+          <tr><td><strong>Subscription status</strong></td><td>Whether you're on a free trial or paid plan. We never see or store your card number — that's handled directly by Stripe or Apple.</td></tr>
+        </table>
+      </div>
+    </section>
+
+    <section>
+      <h2>Who can see your data</h2>
+      <p>
+        <strong>Your accountability partner</strong> — the person you invite — can see your website
+        whitelist, your site requests, and your check-in / "struggling" alerts. That's the whole
+        point of the app: they're the one holding you accountable. They cannot see your password,
+        your payment information, or anything you haven't explicitly shared through the app.
+      </p>
+      <p>
+        <strong>We (Rampart)</strong> can access data only as needed to operate and support the
+        app — for example, to debug a sync issue you report. We do not read your covenant text or
+        check-ins as a matter of course.
+      </p>
+      <p>
+        <strong>We never sell your data.</strong> Not to advertisers, not to data brokers, not to
+        anyone. There is no third-party analytics or ad tracking in this app.
+      </p>
+    </section>
+
+    <section>
+      <h2>Sensitive data</h2>
+      <p>
+        Rampart is built around a Christian, faith-based approach to recovery from pornography.
+        Because of that, some of what you enter — your covenant text, your check-ins, the fact
+        that you use this app at all — can reveal information about your religious beliefs and
+        your mental/behavioral health. We treat all of it as sensitive data, restrict access to
+        it accordingly, and will never use it for advertising or share it with anyone outside
+        your accountability partnership.
+      </p>
+    </section>
+
+    <section>
+      <h2>Data retention</h2>
+      <p>
+        We keep your data for as long as your account is active. If you dissolve a partnership,
+        the whitelist and history tied to that partnership are removed. If you delete your
+        account (see below), everything tied to you is permanently deleted.
+      </p>
+    </section>
+
+    <section>
+      <h2>Deleting your data</h2>
+      <div class="callout">
+        You can permanently delete your account, and everything tied to it, at any time —
+        <strong>directly in the app.</strong> Open Rampart, go to your account (Today tab or Partner
+        tab), and tap <strong>Delete Account</strong>. This immediately and permanently removes your
+        profile, covenant text, check-in history, website whitelist, and partnership records. It
+        cannot be undone. If you're an accountability partner for someone else, deleting your
+        account safely ends that partnership and notifies their device — it doesn't leave them
+        stuck with restrictions they can no longer manage.
+      </div>
+      <p>
+        If you'd rather not use the in-app flow, or you have a broader data request, email
+        <a href="mailto:privacy@rampartaccountability.com">privacy@rampartaccountability.com</a> and
+        we'll handle it directly.
+      </p>
+    </section>
+
+    <section>
+      <h2>Your rights (GDPR / CCPA)</h2>
+      <p>
+        Wherever you live, you can ask us at any time to: access the data we hold about you,
+        correct it, export it, or delete it. The fastest way to access, correct, or delete most of
+        it is directly in the app. For anything else, email
+        <a href="mailto:privacy@rampartaccountability.com">privacy@rampartaccountability.com</a>
+        and we'll respond within 30 days.
+      </p>
+    </section>
+
+    <section>
+      <h2>Children's privacy (COPPA)</h2>
+      <p>
+        Rampart is not directed at children and is not intended for anyone under 13. We do not
+        knowingly collect personal information from children under 13. If you believe a child has
+        created an account, contact us at
+        <a href="mailto:privacy@rampartaccountability.com">privacy@rampartaccountability.com</a> and
+        we'll delete it.
+      </p>
+    </section>
+
+    <section>
+      <h2>How we secure your data</h2>
+      <p>
+        Your data is stored with Supabase (PostgreSQL), protected by row-level security policies
+        so that only you and your accountability partner can access what's relevant to your
+        partnership. Passwords are never stored in plain text. Push notifications are sent
+        directly through Apple's APNs service — we don't route your data through third-party
+        marketing or analytics platforms.
+      </p>
+    </section>
+
+    <section>
+      <h2>Changes to this policy</h2>
+      <p>
+        If we make material changes to this policy, we'll update the date at the top of this page
+        and, where appropriate, notify you in the app.
+      </p>
+    </section>
+
+    <hr class="divider" />
+
+    <p class="contact">
+      Questions about this policy or your data? Email
+      <a href="mailto:privacy@rampartaccountability.com">privacy@rampartaccountability.com</a>.
+    </p>
+
+    <a class="back-link" href="/">← Back to rampartaccountability.com</a>
+
+  </div>
+</body>
+</html>
