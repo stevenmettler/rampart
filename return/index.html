@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Back to Rampart</title>
+  <meta name="description" content="Return to the Rampart app." />
+  <meta name="robots" content="noindex" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg: #0f0e0d;
+      --surface: #1a1916;
+      --border: #2e2c29;
+      --text: #e8e4dd;
+      --muted: #8a8178;
+      --accent: #c8a96e;
+      --accent-dark: #a8893e;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Inter', sans-serif;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 3rem 1.5rem;
+      text-align: center;
+    }
+
+    .container {
+      max-width: 420px;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1.25rem;
+    }
+
+    .wordmark {
+      font-family: 'EB Garamond', serif;
+      font-size: 1rem;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--accent);
+    }
+
+    .headline {
+      font-family: 'EB Garamond', serif;
+      font-size: clamp(1.75rem, 5vw, 2.25rem);
+      line-height: 1.2;
+      font-weight: 400;
+      margin-top: 0.5rem;
+    }
+
+    .body-text {
+      color: var(--muted);
+      font-size: 0.9375rem;
+      line-height: 1.6;
+    }
+
+    .cta {
+      background: var(--accent);
+      color: #0f0e0d;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.9375rem;
+      font-weight: 600;
+      padding: 0.875rem 1.75rem;
+      border: none;
+      border-radius: 6px;
+      text-decoration: none;
+      display: inline-block;
+      margin-top: 0.5rem;
+      transition: background 0.15s;
+    }
+
+    .cta:hover { background: var(--accent-dark); }
+
+    .note {
+      color: var(--muted);
+      font-size: 0.8125rem;
+      line-height: 1.6;
+      margin-top: 0.5rem;
+    }
+
+    .back-link {
+      font-size: 0.875rem;
+      color: var(--muted);
+      text-decoration: none;
+      margin-top: 1.5rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+
+    <span class="wordmark">Rampart</span>
+
+    <h1 class="headline">You're all set.</h1>
+
+    <p class="body-text">
+      Any billing changes you made have been saved.
+    </p>
+
+    <a class="cta" href="rampart://">Return to Rampart</a>
+
+    <p class="note">
+      If the button doesn't work, just switch back to the Rampart app.
+      Changes can take a moment to appear.
+    </p>
+
+    <a class="back-link" href="/">← rampartaccountability.com</a>
+
+  </div>
+</body>
+</html>
