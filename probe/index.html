@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<!--
+  Rampart enforcement probe target.
+
+  Deploy to the `stevenmettler/rampart` GitHub Pages repo as `probe/index.html`, served at
+  https://rampartaccountability.com/probe/
+
+  The app loads this page in a hidden WKWebView on a device that is supposed to be filtered.
+  This host is never on anyone's allowlist, so the page must NOT render. If the app reads
+  RAMPART-PROBE-REACHABLE out of the body, web filtering has stopped working and the member
+  is told.
+
+  Rules for anyone editing this file:
+    - The token string must stay exactly as it is. It is matched literally in
+      EnforcementProbe.swift, and changing one without the other silently disables detection.
+    - Keep it plain text in the body. The app reads document.body.innerText, so a token hidden
+      in a comment, an attribute, or behind JavaScript will not be seen.
+    - No external requests. If this page ever depends on a CDN, a blocked CDN could make a
+      successful load look like a failure.
+    - Do not add this domain to any test whitelist.
+-->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Rampart probe</title>
+<style>
+  body {
+    margin: 0;
+    padding: 48px 24px;
+    background: #0F0E0D;
+    color: #8A8178;
+    font: 15px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  }
+  main { max-width: 34rem; margin: 0 auto; }
+  h1 { color: #C8A96E; font-size: 13px; letter-spacing: 0.18em; text-transform: uppercase; margin: 0 0 18px; }
+  code { color: #E8E4DD; }
+</style>
+</head>
+<body>
+<main>
+  <h1>Rampart</h1>
+  <p><code>RAMPART-PROBE-REACHABLE</code></p>
+  <p>
+    This page exists so the Rampart app can check that web filtering is actually working on a
+    device, rather than trusting the operating system's report that it is.
+  </p>
+  <p>
+    If you are reading this on a phone that is supposed to be protected, filtering is not
+    running. Open Rampart and tell your accountability partner.
+  </p>
+</main>
+</body>
+</html>
